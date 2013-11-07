@@ -1,0 +1,85 @@
+body {
+	margin: 0;
+}
+/*====== GLOBAL banner layout======*/
+#carousel {
+	position: relative;
+	height: 477px;
+	color: white;
+    font-weight: lighter;
+}
+.carousel-slide {
+	position: absolute;
+	top: 70px;
+	left: 0;
+	width: 100%;
+	height: 477px;
+	display: none;
+}
+.carousel-slide.on {
+	z-index: 9;
+	opacity: 1;
+}
+.arrow {
+	position: absolute;
+	top: 220px;
+	cursor: pointer;
+	font-size: 36px;
+	color: #fff;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+	padding: 0 12px;
+	background: rgba(153, 153, 153, 0.6);
+	z-index: 10;
+}
+.left{
+	left: 25px;
+}
+.right {
+	right: 25px;
+}
+
+
+/*== RESPONSIVE Layout
+=============================================*/
+@media (min-width: 1140px) and (max-width: 1400px) {
+}
+@media (min-width: 979px) and (max-width: 1140px) {
+}
+@media (min-width: 769px) and (max-width: 979px) {
+}
+@media (max-width: 768px) {
+/*===== banner & contents =====*/
+	#carousel, .carousel-slide {
+		height: 400px;
+	}
+	.arrow {
+		top: 184px;
+	}
+	.left {
+		left: 18px;
+	}
+	.right {
+		right: 18px;
+	}	
+}
+@media (max-width: 640px) {
+	.arrow {
+		display: none !important;
+	}
+}
+@media (max-width: 480px) {
+	.carousel-slide {
+/*		background: url(../img/bus_main.png) no-repeat center center !important;*/
+	}
+	.arrow {
+		display: none !important;
+	}
+	#carousel, .carousel-slide {
+		height: 210px;
+	}
+
+}
+
+	
