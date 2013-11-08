@@ -52,7 +52,6 @@
 	
 				<div class="carousel-slide">
 					<div class="caption">Simply Use<span>Simply Carousel</span></div>
-					</div>
 				</div>
 			</div> <!--#main_banner-->
 			
@@ -72,9 +71,45 @@
 						<h2>Tutorial</h2>
 					</header>
 					<div class="contents">
-						<pre><code class="language-markup"></code></pre>
-						<pre><code class="language-css"></code></pre>
-						<pre><code class="language-javascript"></code></pre>
+						<h3>1. Simple image slider</h3>
+						<pre><code class="language-markup">
+&lt;div id="main_banner">
+
+	&lt;div class="carousel-slide" style="background: url(image1.png) no-repeat 50% 50%; background-size: cover;">
+		&lt;div class="caption">1st Slide Caption&lt;/div>
+	&lt;/div>			
+
+	&lt;div class="carousel-slide" style="background: url(image2.png) no-repeat 50% 50%; background-size: cover;">
+		&lt;div class="caption">2nd Slide Caption&lt;/div>
+	&lt;/div>	
+
+	&lt;div class="carousel-slide" style="background: url(image3.png) no-repeat 50% 50%; background-size: cover;">
+		&lt;div class="caption">3rd Slide Caption&lt;/div>
+	&lt;/div>
+
+	&lt;div class="carousel-slide" style="background: url(image4.png) no-repeat 50% 50%; background-size: cover;">
+		&lt;div class="caption">4th Slide Caption&lt;/div>
+	&lt;/div>
+
+&lt;/div> &lt;!--#main_banner-->
+
+						</code></pre>
+						<pre><code class="language-css">#main_banner {
+	height: 400px;
+	background-size: cover;
+}
+.carousel-slide {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	display: none;
+}
+.carousel-slide.on {
+	z-index: 9;
+	opacity: 1;
+}
+</code></pre>
+						<pre><code class="language-javascript">$('.carousel-slide').slider();</code></pre>
 					</div>
 				</div>
 				<div id="contact">
