@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- HTML begins -->
+<html dir="ltr" lang="en">
+    <head>       
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">     
+        <title>Simply Carousel Demo</title>        
+
+        <meta name="description" content="">
+        <meta name="keywords" content="" />
+		<meta name="viewport" content="width=device-width">
+
+		<link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="img/icons/favicon.ico" type="image/x-icon">		
+
+        <link rel="stylesheet" href="css/stylesheet.css">
+        <link rel="stylesheet" href="css/prism.css">
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/prism.js"></script>
+		<script type="text/javascript" src="js/simplycarousel.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		
+		
+		
+	</head>	
+	<body>	
+		<div class="top-bar fix">
+			<nav>
+				<ul>
+					<li><a href="#demo">Demo</a></li>
+					<li><a href="#tutorial">Tutorial</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			<div class="clear"></div>
+			</nav>
+			<div class="clear"></div>
+		</div>
+		
+		<div class="container">
+			<div id="main_banner">
+				<div class="carousel-slide">
+					<div class="caption">Mobile-First Design Aproach</div>
+				</div>			
+				<div class="carousel-slide" >
+					<div class="caption">Fully Responsive layout</div>
+				</div>
+				
+				<div class="carousel-slide" >
+					<div class="caption">Only 4kb disk size</div>
+				</div>
+	
+				<div class="carousel-slide">
+					<div class="caption">Simply Use<span>Simply Carousel</span></div>
+				</div>
+			</div> <!--#main_banner-->
+			
+			<div class="contents_wrap">
+				<div id="demo">
+					<header>
+						<h2>DEMO</h2>
+					</header>
+					<div class="contents">
+						<div class="demo"><a href="#"></a></div>
+						<div class="demo"><a href="#"></a></div>
+					</div>
+					
+				</div>
+				<div id="tutorial">
+					<header>
+						<h2>Tutorial</h2>
+					</header>
+					<div class="contents">
+						<h3>1. Simple image slider</h3>
+						<pre><code class="language-markup">
+&lt;div id="main_banner">
+
+	&lt;div class="carousel-slide" style="background: url(image1.png) no-repeat 50% 50%; background-size: cover;">
+		&lt;div class="caption">1st Slide Caption&lt;/div>
+	&lt;/div>			
+
+	&lt;div class="carousel-slide" style="background: url(image2.png) no-repeat 50% 50%; background-size: cover;">
+		&lt;div class="caption">2nd Slide Caption&lt;/div>
+	&lt;/div>	
+
+	&lt;div class="carousel-slide" style="background: url(image3.png) no-repeat 50% 50%; background-size: cover;">
+		&lt;div class="caption">3rd Slide Caption&lt;/div>
+	&lt;/div>
+
+	&lt;div class="carousel-slide" style="background: url(image4.png) no-repeat 50% 50%; background-size: cover;">
+		&lt;div class="caption">4th Slide Caption&lt;/div>
+	&lt;/div>
+
+&lt;/div> &lt;!--#main_banner-->
+
+						</code></pre>
+						<pre><code class="language-css">#main_banner {
+	height: 400px;
+	background-size: cover;
+}
+.carousel-slide {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	display: none;
+}
+.carousel-slide.on {
+	z-index: 9;
+	opacity: 1;
+}
+</code></pre>
+						<pre><code class="language-javascript">$('.carousel-slide').slider();</code></pre>
+					</div>
+				</div>
+				<div id="contact">
+					<header>
+						<h2>Contact</h2>
+					</header>
+					<div class="contents">
+						social icons go here<br>
+						github, fb, twitter, linkedin, email etc
+					</div>
+				</div>
+
+			</div>
+		</div><!--.container-->				
+
+	</body>
+</html>
