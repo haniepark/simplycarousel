@@ -13,12 +13,14 @@
 		<link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="img/icons/favicon.ico" type="image/x-icon">		
 
-        <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/stylesheet.css">
+        <link rel="stylesheet" href="css/prism.css">
 
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/prism.js"></script>
 		<script type="text/javascript" src="js/simplycarousel.js"></script>
 		<script type="text/javascript" src="js/script.js"></script>
+		
 		
 		
 	</head>	
@@ -26,10 +28,11 @@
 		<div class="top-bar fix">
 			<nav>
 				<ul>
-					<li><a href="">Demo</a></li>
-					<li><a href="">How to use</a></li>
-					<li><a href="">Contact</a></li>
+					<li><a href="#demo">Demo</a></li>
+					<li><a href="#tutorial">Tutorial</a></li>
+					<li><a href="#contact">Contact</a></li>
 				</ul>
+			<div class="clear"></div>
 			</nav>
 			<div class="clear"></div>
 		</div>
@@ -37,58 +40,50 @@
 		<div class="container">
 			<div id="main_banner">
 				<div class="carousel-slide">
-					<div class="caption">
-						<div class="title">Mobile-First Design Aproach</div>
-						<div class="descr">#</div>
-					</div>
+					<div class="caption">Mobile-First Design Aproach</div>
+				</div>			
+				<div class="carousel-slide" >
+					<div class="caption">Fully Responsive layout</div>
 				</div>
 				
 				<div class="carousel-slide" >
-					<div class="caption">
-						<div class="title">Fully Responsive layout</div>
-						<div class="descr">#</div>
-					</div>
-				</div>
-				
-				<div class="carousel-slide" >
-					<div class="caption">
-						<div class="title">Only 4kb disk size</div>
-						<div class="descr">#</div>
-					</div>
+					<div class="caption">Only 4kb disk size</div>
 				</div>
 	
 				<div class="carousel-slide">
-					<div class="caption">
-						<div class="title">Simply Use</div>
-						<div class="descr">#</div>
+					<div class="caption">Simply Use<span>Simply Carousel</span></div>
 					</div>
 				</div>
 			</div> <!--#main_banner-->
 			
-			<div class="contents-wrap">
+			<div class="contents_wrap">
 				<div id="demo">
 					<header>
 						<h2>DEMO</h2>
 					</header>
 					<div class="contents">
-						
+						<div class="demo"><a href="#"></a></div>
+						<div class="demo"><a href="#"></a></div>
 					</div>
 					
 				</div>
-				<div class="usage">
+				<div id="tutorial">
 					<header>
-						<h2>Usage</h2>
+						<h2>Tutorial</h2>
 					</header>
 					<div class="contents">
-						
+						<pre><code class="language-markup"></code></pre>
+						<pre><code class="language-css"></code></pre>
+						<pre><code class="language-javascript"></code></pre>
 					</div>
 				</div>
-				<div class="contact">
+				<div id="contact">
 					<header>
 						<h2>Contact</h2>
 					</header>
 					<div class="contents">
-						
+						social icons go here<br>
+						github, fb, twitter, linkedin, email etc
 					</div>
 				</div>
 

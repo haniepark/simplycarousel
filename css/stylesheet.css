@@ -1,85 +1,72 @@
 body {
+	font-family: "Helvetica Neue", Ariel, sans-serif;
+	color: #333;
 	margin: 0;
 }
-/*====== GLOBAL banner layout======*/
-#carousel {
-	position: relative;
-	height: 477px;
-	color: white;
-    font-weight: lighter;
+.clear {
+	clear: both;
+}
+.top-bar.fix {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 60px;
+	background: #EBF2F2;
+	z-index: 100;
+}
+a {
+	text-decoration: none;
+	color: #678282;
+}
+nav ul {
+	float: right;
+	list-style-type: none;
+	-webkit-padding-start: 0;
+	-moz-padding-start: 0;
+	margin: 20px 25px;
+}
+nav ul li {
+	float: left;
+	padding: 0 10px;
+}
+#main_banner {
+	height: 400px;
+	background: url(../img/14.jpg) no-repeat center center;
+	background-size: cover;
 }
 .carousel-slide {
 	position: absolute;
-	top: 70px;
 	left: 0;
 	width: 100%;
-	height: 477px;
 	display: none;
 }
 .carousel-slide.on {
 	z-index: 9;
 	opacity: 1;
 }
-.arrow {
-	position: absolute;
-	top: 220px;
-	cursor: pointer;
-	font-size: 36px;
-	color: #fff;
-	-webkit-border-radius: 50px;
-	-moz-border-radius: 50px;
-	border-radius: 50px;
-	padding: 0 12px;
-	background: rgba(153, 153, 153, 0.6);
-	z-index: 10;
+.caption {
+	width: 300px;
+	margin: 180px auto;
+	text-align: center;
+	font-size: 18px;
+	color: white;
 }
-.left{
-	left: 25px;
+.caption span {
+	display: block;
+	padding-top: 15px;
+	font-size: 28px;
 }
-.right {
-	right: 25px;
+.container {
+	margin: 60px 0 0 0;
+		
 }
-
-
-/*== RESPONSIVE Layout
-=============================================*/
-@media (min-width: 1140px) and (max-width: 1400px) {
+.contents_wrap {
+	width: 750px;
+	margin: 40px auto;
 }
-@media (min-width: 979px) and (max-width: 1140px) {
+.demo {
+	width: 300px;
+	height: 200px;
+	display: inline-block;
+	background: grey;
 }
-@media (min-width: 769px) and (max-width: 979px) {
-}
-@media (max-width: 768px) {
-/*===== banner & contents =====*/
-	#carousel, .carousel-slide {
-		height: 400px;
-	}
-	.arrow {
-		top: 184px;
-	}
-	.left {
-		left: 18px;
-	}
-	.right {
-		right: 18px;
-	}	
-}
-@media (max-width: 640px) {
-	.arrow {
-		display: none !important;
-	}
-}
-@media (max-width: 480px) {
-	.carousel-slide {
-/*		background: url(../img/bus_main.png) no-repeat center center !important;*/
-	}
-	.arrow {
-		display: none !important;
-	}
-	#carousel, .carousel-slide {
-		height: 210px;
-	}
-
-}
-
-	
