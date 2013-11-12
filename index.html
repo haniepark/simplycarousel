@@ -13,9 +13,10 @@
 		<link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="img/icons/favicon.ico" type="image/x-icon">		
 
-        <link rel="stylesheet" href="css/stylesheet.css">
         <link rel="stylesheet" href="css/prism.css">
-
+        <link rel="stylesheet" href="css/stylesheet.css">
+		<link rel="stylesheet" href="css/carousel.css">
+		
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script type="text/javascript" src="js/prism.js"></script>
 		<script type="text/javascript" src="js/simplycarousel.js"></script>
@@ -66,44 +67,130 @@
 						<h2>Tutorial</h2>
 					</header>
 					<div class="contents">
-						<h3>1. Simple image slider</h3>
-						<pre><code class="language-markup">
-&lt;div id="main_banner">
+						<h3>HTML</h3>
+						<pre><code class="language-markup">&lt;div id="main_banner">
 
-	&lt;div class="carousel-slide" style="background: url(image1.png) no-repeat 50% 50%; background-size: cover;">
+	&lt;div class="carousel-slide">
 		&lt;div class="caption">1st Slide Caption&lt;/div>
 	&lt;/div>			
 
-	&lt;div class="carousel-slide" style="background: url(image2.png) no-repeat 50% 50%; background-size: cover;">
+	&lt;div class="carousel-slide">
 		&lt;div class="caption">2nd Slide Caption&lt;/div>
 	&lt;/div>	
 
-	&lt;div class="carousel-slide" style="background: url(image3.png) no-repeat 50% 50%; background-size: cover;">
+	&lt;div class="carousel-slide">
 		&lt;div class="caption">3rd Slide Caption&lt;/div>
 	&lt;/div>
 
-	&lt;div class="carousel-slide" style="background: url(image4.png) no-repeat 50% 50%; background-size: cover;">
+	&lt;div class="carousel-slide">
 		&lt;div class="caption">4th Slide Caption&lt;/div>
 	&lt;/div>
 
+	&lt;!-- FOR CAROUSEL WITH ARROW AND HOVER OPTIONS --> 
+	&lt;span class="arrow left select-none">&lt;&lt;/span>
+	&lt;span class="arrow right select-none">&gt;&lt;/span>
+
 &lt;/div> &lt;!--#main_banner-->
 
-						</code></pre>
-						<pre><code class="language-css">.carousel-slide {
+</code></pre>
+					<h3>CSS</h3>
+					<pre><code class="language-css">#main_banner, .carousel-slide {
+	height: 400px;
+}
+.carousel-slide {
 	position: absolute;
 	left: 0;
 	width: 100%;
-	height: 400px;
 	display: none;
 }
 .carousel-slide.on {
 	z-index: 9;
 	opacity: 1;
 }
+.caption {
+	width: 300px;
+	margin: 180px auto;
+	text-align: center;
+	font-size: 18px;
+	color: white;
+}
+.caption span {
+	display: block;
+	padding-top: 15px;
+	font-size: 28px;
+}
+
+/*FOR CAROUSEL WITH ARROW AND HOVER OPTIONS*/
+.arrow {
+	position: absolute;
+	top: 240px;
+	cursor: pointer;
+	font-size: 36px;
+	color: #fff;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+	padding: 0 14px 7px;
+	background: rgba(153, 153, 153, 0.6);
+	z-index: 10;
+}
+.left{
+	left: 25px;
+}
+.right {
+	right: 25px;
+}
+.select-none {
+    -webkit-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+}
+
 </code></pre>
-						<pre><code class="language-javascript">$('.carousel-slide').slider();</code></pre>
+
+						<h3>jQuery - Default</h3>
+						<p>Pick a slider function of your choice</p>
+						<pre><code class="language-javascript">//SIMPLE IMAGE SLIDER
+$('.carousel-slide').slider();
+
+//CAROUSEL WITH ARROW AND HOVER OPTIONS
+$('.carousel-slide').sliderArrow();
+
+</code></pre>
+
+						<h3>jQuery - Customizable</h3>
+						<p>You can customize 3 properties shown below for both slider functions.
+							<ol>
+								<li>transition_time: transition time between slides</li>
+								<li>next_slides: staging time for each slide</li>
+								<li>slideOn: current slide indicator</li>
+							</ol>	
+						<div class="important">*IMPORTANT NOTE*</div>
+						<span class="red">slideOn</span> property has to be '<i class="red">.your-slider-name</i>.on', if your slider name is something other than '.carousel-slide'
+						</p>
+
+						<pre><code class="language-javascript">//SIMPLE IMAGE SLIDER
+$('.carousel-slide').slider({
+	//DEFAULTS
+	transition_time : 1000,
+	next_slides : 2500,
+	slideOn :'.carousel-slide.on'
+});
+
+//CAROUSEL WITH ARROW AND HOVER OPTIONS
+$('.carousel-slide').sliderArrow({
+	//DEFAULTS
+	transition_time : 1000,
+	next_slides : 2500,
+	slideOn :'.carousel-slide.on'
+});
+
+</code></pre>
+
 					</div>
 				</div>
+				
+				
 				<div id="contact">
 					<header>
 						<h2>Contact</h2>

@@ -31,8 +31,8 @@
 		right = this.closest(container).find('.arrow.right'),
 		left = this.closest(container).find('.arrow.left'),
 		arrow = '.arrow',
-		on = 'on',
-		slideOn = '.carousel-slide.on';				
+		on = 'on';
+				
 		function carousel(){
 			var i = $(q.slideOn).index();    
 			slide.eq(i).removeClass(on).fadeOut(q.transition_time);	

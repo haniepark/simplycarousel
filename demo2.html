@@ -13,8 +13,9 @@
 		<link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="img/icons/favicon.ico" type="image/x-icon">		
 
-        <link rel="stylesheet" href="css/stylesheet.css">
         <link rel="stylesheet" href="css/prism.css">
+        <link rel="stylesheet" href="css/stylesheet.css">
+        <link rel="stylesheet" href="css/carousel.css">
 
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script type="text/javascript" src="js/prism.js"></script>
@@ -26,12 +27,12 @@
 			
 			<nav>
 				<ul id="back">
-					<li><a href="#tutorial">&larr; Back to Tutorial</a></li>
+					<li><a href="index.html">&larr; Back to Tutorial</a></li>
 				</ul>
 				<ul>
-					<li><a href="#tutorial">What We Do</a></li>
-					<li><a href="#tutorial">How We Do</a></li>
-					<li><a href="#tutorial">Get In Touch</a></li>
+					<li><a href="#what">What We Do</a></li>
+					<li><a href="#how">How We Do</a></li>
+					<li><a href="#touch">Get In Touch</a></li>
 				</ul>
 			<div class="clear"></div>
 			</nav>
@@ -39,15 +40,15 @@
 		</div>
 		
 		<div class="container">
-			<div id="main_banner">
+			<div id="main_banner" class="demo">
 				<div class="carousel-slide" style="background: url(img/image1.jpg) no-repeat 50% 50%; background-size: cover;">
 					<div class="caption">Simply Carousel</div>
 				</div>			
 				<div class="carousel-slide" style="background: url(img/image2.jpg) no-repeat 50% 50%; background-size: cover;">
-					<div class="caption">Simple Image Slider with Options</div>
+					<div class="caption">Simple Image Slider</div>
 				</div>
 				<div class="carousel-slide" style="background: url(img/image3.jpg) no-repeat 50% 50%; background-size: cover;">
-					<div class="caption">Hover to stop & show directing arrows</div>
+					<div class="caption">Hover to stop & display arrows</div>
 				</div>	
 				<div class="carousel-slide" style="background: url(img/image4.jpg) no-repeat 50% 50%; background-size: cover;">
 					<div class="caption">All done with one single line</div>
@@ -57,7 +58,7 @@
 			</div> <!--#main_banner-->
 			
 			<div class="contents_wrap">
-				<div class="wrap">
+				<div class="wrap" id="what">
 					<header>
 						<h1>What We Do</h1>
 					</header>
@@ -67,7 +68,7 @@
 				</div>
 			</div>
 			<div class="contents_wrap">
-				<div class="wrap">
+				<div class="wrap" id="how">
 					<header>
 						<h1>How We Do</h1>
 					</header>
@@ -80,7 +81,7 @@
 				</div>
 			</div>
 			<div class="contents_wrap">
-				<div class="wrap">
+				<div class="wrap" id="touch">
 					<header>
 						<h1>Get In Touch</h1>
 					</header>

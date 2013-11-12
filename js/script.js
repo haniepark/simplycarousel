@@ -6,5 +6,4 @@ $(document).ready(function(){
 	    return false;
 	});
 	$('.carousel-slide').slider();
-	
 });
