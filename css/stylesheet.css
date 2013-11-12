@@ -63,7 +63,7 @@ nav ul li {
 	margin: 60px 0;
 		
 }
-#main_banner {
+#main_banner.index {
 	height: 400px;
 	background: url(../img/14.jpg) no-repeat center center;
 	background-size: cover;
@@ -81,6 +81,12 @@ nav ul li {
 .wrap {
 	width: 750px;
 	margin: 0 auto;
+}
+.preview {
+	width: 300px;
+    height: 200px;
+    display: inline-block;
+    background: grey;
 }
 .col3 {
 	display: inline-block;
