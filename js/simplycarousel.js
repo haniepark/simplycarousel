@@ -59,28 +59,7 @@
 			interval = setInterval(carousel, total_time);
 			$(arrow).hide()
 		});	
-		//window loaded @ < 480px;
-		if($(window).width() <= 480) {
-			clearTimeout(interval);
-			$(container).hover(function(){	
-			}, function(){
-				clearTimeout(interval);
-			});
-		}	
-		$(window).on('resize', function(){
-			if($(window).width() <= 480) {
-				clearTimeout(interval);
-				$(container).hover(function(){	
-				}, function(){
-					clearTimeout(interval);
-				});				
-			} else {
-				clearTimeout(interval);
-				interval = setInterval(carousel, total_time);
-				$(container).mouseover(function(){
-				});
-			}	 
-		});
+
 	}			
 	// Defaults
     $.fn.sliderArrow.defaults = {

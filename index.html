@@ -57,8 +57,8 @@
 						<h2>DEMO</h2>
 					</header>
 					<div class="contents">
-						<div class="preview"><a href="#"></a></div>
-						<div class="preview"><a href="#"></a></div>
+						<div class="preview"><a href="demo1.html">demo1</a></div>
+						<div class="preview"><a href="demo2.html">demo2</a></div>
 					</div>
 					
 				</div>
@@ -70,19 +70,19 @@
 						<h3>HTML</h3>
 						<pre><code class="language-markup">&lt;div id="main_banner">
 
-	&lt;div class="carousel-slide">
+	&lt;div class="carousel-slide" style="background: url(img/image1.jpg) no-repeat 50% 50%; background-size: cover;">
 		&lt;div class="caption">1st Slide Caption&lt;/div>
 	&lt;/div>			
 
-	&lt;div class="carousel-slide">
+	&lt;div class="carousel-slide" style="background: url(img/image2.jpg) no-repeat 50% 50%; background-size: cover;">
 		&lt;div class="caption">2nd Slide Caption&lt;/div>
 	&lt;/div>	
 
-	&lt;div class="carousel-slide">
+	&lt;div class="carousel-slide" style="background: url(img/image3.jpg) no-repeat 50% 50%; background-size: cover;">
 		&lt;div class="caption">3rd Slide Caption&lt;/div>
 	&lt;/div>
 
-	&lt;div class="carousel-slide">
+	&lt;div class="carousel-slide" style="background: url(img/image4.jpg) no-repeat 50% 50%; background-size: cover;">
 		&lt;div class="caption">4th Slide Caption&lt;/div>
 	&lt;/div>
 
@@ -140,16 +140,47 @@
 .right {
 	right: 25px;
 }
+
+/*disable text selection highlighting */
 .select-none {
     -webkit-user-select: none;
     -moz-user-select: none; 
     -ms-user-select: none; 
 }
 
+/*Tablet*/
+@media (max-width: 769px) {
+	#main_banner, .carousel-slide {
+		height: 300px;
+	}
+	.caption {
+		width: 300px;
+		margin: 135px auto 0;
+		font-size: 18px;
+	}
+	.caption span {
+		font-size: 24px;
+	}
+}
+/*Mobile*/
+@media (max-width: 480px) {
+	#main_banner, .carousel-slide {
+		height: 210px;
+	}
+	.caption {
+		width: 300px;
+		margin: 95px auto 0;
+		font-size: 18px;
+	}
+	.caption span {
+		font-size: 24px;
+	}
+}
+
 </code></pre>
 
 						<h3>jQuery - Default</h3>
-						<p>Pick a slider function of your choice</p>
+						<p>Pick a slider function of your choice.</p>
 						<pre><code class="language-javascript">//SIMPLE IMAGE SLIDER
 $('.carousel-slide').slider();
 
@@ -196,8 +227,10 @@ $('.carousel-slide').sliderArrow({
 						<h2>Contact</h2>
 					</header>
 					<div class="contents">
-						social icons go here<br>
-						github, fb, twitter, linkedin, email etc
+						<a href="#"><img src="img/mail.png" alt="mail" width="116" height="116"></a>
+						<a href="#"><img src="img/fb.png" alt="fb" width="116" height="116"></a>
+						<a href="#"><img src="img/twitter.png" alt="twitter" width="116" height="116"></a>
+						<a href="#"><img src="img/github.png" alt="github" width="116" height="116"></a>
 					</div>
 				</div>
 
