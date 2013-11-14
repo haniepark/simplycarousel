@@ -81,11 +81,15 @@ nav ul li {
 	margin: 0 auto;
 }
 .preview {
-	width: 350px;
-    height: 200px;
     display: inline-block;
     margin-right: 20px;
-    background: lightgrey;
+}
+.preview:first-child {
+	margin-right: 100px;
+}
+.preview img {
+	width: 100%;
+	height: auto;
 }
 ol {
 	-webkit-padding-start: 21px;
@@ -100,6 +104,9 @@ ol {
 @media (max-width: 1000px) {
 	.wrap {
 		width: 750px;
+	}
+	.preview:first-child {
+		margin-right: 20px;
 	}
 	#touch img {
 		margin: 10px 5px 0 0;
