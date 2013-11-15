@@ -59,7 +59,7 @@ nav ul li {
 	padding: 0 10px;
 }
 .container {
-	margin: 60px 0;
+	margin-top: 60px;
 		
 }
 #main_banner.index {
@@ -90,6 +90,9 @@ nav ul li {
 .preview img {
 	width: 100%;
 	height: auto;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
 }
 ol {
 	-webkit-padding-start: 21px;
@@ -98,8 +101,23 @@ ol {
 #touch img {
 	margin: 10px 10px 0 0;
 }
+#contact {
+	margin-bottom: 40px;
+}
 #contact img{
 	margin: 10px 20px 0 0;
+}
+footer {
+	background: grey;
+	height: 120px;
+}
+#license {
+	text-align: center;
+	padding: 45px 0;
+}
+#license a {
+	color: #f0f0f0;
+	padding-left: 7px;
 }
 @media (max-width: 1000px) {
 	.wrap {
