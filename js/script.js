@@ -1,3 +1,4 @@
+// USED FOR DEMO1
 function menuCollapse(){
 	if($(window).width() < 769) {
       	$('#nav').hide();

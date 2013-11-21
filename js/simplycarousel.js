@@ -59,7 +59,6 @@
 			interval = setInterval(carousel, total_time);
 			$(arrow).hide()
 		});	
-
 	}			
 	// Defaults
     $.fn.sliderArrow.defaults = {
