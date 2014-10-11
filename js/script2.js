@@ -1,4 +1,4 @@
-// USED FOR DEMO1
+// USED FOR DEMO2
 function menuCollapse(){
 	if($(window).width() < 769) {
       	$('#nav').hide();
@@ -15,9 +15,12 @@ $(document).ready(function(){
 	    }, 500);
 	    return false;
 	});
-
+	
 	menuCollapse();	
 	$(window).on('resize', function(){menuCollapse();});
 	$('#menu').click(function(){$('#nav').slideToggle();});
-	$('.carousel-slide').slider();
+
+	$('.carousel-slide').sliderArrow({
+		next_slides : 3000
+	});
 });

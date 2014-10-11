@@ -9,20 +9,19 @@
         <meta name="description" content="">
         <meta name="keywords" content="" />
 		<meta name="viewport" content="width=device-width">
-
+		
 		<link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="img/icons/favicon.ico" type="image/x-icon">		
 
-        <link rel="stylesheet" href="css/stylesheet.css">
+		<link rel="stylesheet" href="font/css/font-awesome.min.css" type="text/css" media="screen" />
         <link rel="stylesheet" href="css/prism.css">
-
+        <link rel="stylesheet" href="css/stylesheet.css">
+		<link rel="stylesheet" href="css/carousel.css">
+		
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script type="text/javascript" src="js/prism.js"></script>
 		<script type="text/javascript" src="js/simplycarousel.js"></script>
-		<script type="text/javascript" src="js/script.js"></script>
-		
-		
-		
+		<script type="text/javascript" src="js/script.js"></script>		
 	</head>	
 	<body>	
 		<div class="top-bar fix">
@@ -38,65 +37,71 @@
 		</div>
 		
 		<div class="container">
-			<div id="main_banner">
+			<div id="main_banner" class="index">
 				<div class="carousel-slide">
-					<div class="caption">Mobile-First Design Aproach</div>
+					<div class="caption">Mobile-First Design Approach</div>
 				</div>			
 				<div class="carousel-slide" >
 					<div class="caption">Fully Responsive layout</div>
 				</div>
-				
 				<div class="carousel-slide" >
 					<div class="caption">Only 4kb disk size</div>
-				</div>
-	
+				</div>	
 				<div class="carousel-slide">
-					<div class="caption">Simply Use<span>Simply Carousel</span></div>
+					<div class="caption last">Simply Use<span>Simply Carousel</span></div>
 				</div>
 			</div> <!--#main_banner-->
 			
-			<div class="contents_wrap">
+			<div class="wrap">
 				<div id="demo">
 					<header>
 						<h2>DEMO</h2>
 					</header>
 					<div class="contents">
-						<div class="demo"><a href="#"></a></div>
-						<div class="demo"><a href="#"></a></div>
+						<div class="preview"><a href="demo1.html"><img src="img/demo1.png" alt="Demo1 simple carousel"></a></div>
+						<div class="preview"><a href="demo2.html"><img src="img/demo2.png" alt="Demo2 simple carousel with options"></a></div>
+					</div>				
+				</div>
+				<div id="download">
+					<header><h2><a href="simplycarousel.zip">Download SimplyCarousel</a></h2></header>
+					<div class="contents">
+						<p>Use files in 'SimplyCarousel package' folder for your development</p>
 					</div>
-					
 				</div>
 				<div id="tutorial">
 					<header>
 						<h2>Tutorial</h2>
 					</header>
 					<div class="contents">
-						<h3>1. Simple image slider</h3>
-						<pre><code class="language-markup">
-&lt;div id="main_banner">
+						<h3>HTML</h3>
+						<pre><code class="language-markup">&lt;div id="main_banner">
 
-	&lt;div class="carousel-slide" style="background: url(image1.png) no-repeat 50% 50%; background-size: cover;">
+	&lt;div class="carousel-slide" style="background: url(img/image1.jpg) no-repeat 50% 50%; background-size: cover;">
 		&lt;div class="caption">1st Slide Caption&lt;/div>
 	&lt;/div>			
 
-	&lt;div class="carousel-slide" style="background: url(image2.png) no-repeat 50% 50%; background-size: cover;">
+	&lt;div class="carousel-slide" style="background: url(img/image2.jpg) no-repeat 50% 50%; background-size: cover;">
 		&lt;div class="caption">2nd Slide Caption&lt;/div>
 	&lt;/div>	
 
-	&lt;div class="carousel-slide" style="background: url(image3.png) no-repeat 50% 50%; background-size: cover;">
+	&lt;div class="carousel-slide" style="background: url(img/image3.jpg) no-repeat 50% 50%; background-size: cover;">
 		&lt;div class="caption">3rd Slide Caption&lt;/div>
 	&lt;/div>
 
-	&lt;div class="carousel-slide" style="background: url(image4.png) no-repeat 50% 50%; background-size: cover;">
+	&lt;div class="carousel-slide" style="background: url(img/image4.jpg) no-repeat 50% 50%; background-size: cover;">
 		&lt;div class="caption">4th Slide Caption&lt;/div>
 	&lt;/div>
 
+	&lt;!-- FOR CAROUSEL WITH ARROW AND HOVER OPTIONS --> 
+	&lt;span class="arrow left select-none">&lt;&lt;/span>
+	&lt;span class="arrow right select-none">&gt;&lt;/span>
+
 &lt;/div> &lt;!--#main_banner-->
 
-						</code></pre>
-						<pre><code class="language-css">#main_banner {
+</code></pre>
+					<h3>CSS</h3>
+					<pre><code class="language-css">#main_banner, .carousel-slide {
 	height: 400px;
-	background-size: cover;
 }
 .carousel-slide {
 	position: absolute;
@@ -108,8 +113,117 @@
 	z-index: 9;
 	opacity: 1;
 }
+.caption {
+	width: 300px;
+	margin: 180px auto;
+	text-align: center;
+	font-size: 18px;
+	color: white;
+}
+.caption span {
+	display: block;
+	padding-top: 15px;
+	font-size: 28px;
+}
+
+/*FOR CAROUSEL WITH ARROW AND HOVER OPTIONS*/
+.arrow {
+	position: absolute;
+	top: 240px;
+	cursor: pointer;
+	font-size: 36px;
+	color: #fff;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+	padding: 0 14px 7px;
+	background: rgba(153, 153, 153, 0.6);
+	z-index: 10;
+}
+.left{
+	left: 25px;
+}
+.right {
+	right: 25px;
+}
+
+/*disable text selection highlighting */
+.select-none {
+    -webkit-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+}
+
+/*Tablet*/
+@media (max-width: 769px) {
+	#main_banner, .carousel-slide {
+		height: 300px;
+	}
+	.caption {
+		width: 300px;
+		margin: 135px auto 0;
+		font-size: 18px;
+	}
+	.caption span {
+		font-size: 24px;
+	}
+}
+/*Mobile*/
+@media (max-width: 480px) {
+	#main_banner, .carousel-slide {
+		height: 210px;
+	}
+	.caption {
+		width: 300px;
+		margin: 95px auto 0;
+		font-size: 18px;
+	}
+	.caption span {
+		font-size: 24px;
+	}
+}
+
 </code></pre>
-						<pre><code class="language-javascript">$('.carousel-slide').slider();</code></pre>
+
+						<h3>jQuery - Default</h3>
+						<p>Pick a slider function of your choice.</p>
+						<pre><code class="language-javascript">//SIMPLE IMAGE SLIDER
+$('.carousel-slide').slider();
+
+//CAROUSEL WITH ARROW AND HOVER OPTIONS
+$('.carousel-slide').sliderArrow();
+
+</code></pre>
+
+						<h3>jQuery - Customizable</h3>
+						<p>You can customize 3 properties shown below for both slider functions.
+							<ol>
+								<li>transition_time: transition time between slides</li>
+								<li>next_slides: staging time for each slide</li>
+								<li>slideOn: current slide indicator</li>
+							</ol>	
+						<div class="important">IMPORTANT NOTE</div>
+						<span class="red">slideOn</span> property has to be '<i class="red">.your-slider-name</i>.on', if your slider name is something other than '.carousel-slide'
+						</p>
+
+						<pre><code class="language-javascript">//SIMPLE IMAGE SLIDER
+$('.carousel-slide').slider({
+	//DEFAULTS
+	transition_time : 1000,
+	next_slides : 2500,
+	slideOn :'.carousel-slide.on'
+});
+
+//CAROUSEL WITH ARROW AND HOVER OPTIONS
+$('.carousel-slide').sliderArrow({
+	//DEFAULTS
+	transition_time : 1000,
+	next_slides : 2500,
+	slideOn :'.carousel-slide.on'
+});
+
+</code></pre>
+
 					</div>
 				</div>
 				<div id="contact">
@@ -117,13 +231,13 @@
 						<h2>Contact</h2>
 					</header>
 					<div class="contents">
-						social icons go here<br>
-						github, fb, twitter, linkedin, email etc
+						<a href="https://github.com/haniepark" target="_blank" title="Fork me on Github"><span class="icons"><i class="fa fa-github fa-5x"></i></span></a>
+						<a class="linkedin" href="http://ca.linkedin.com/in/haniepark" target="_blank" title="Let's connect!"><span class="icons"><i class="fa fa-linkedin-square fa-5x"></i></span></i></span></a>
+						<a class="twitter" href="https://twitter.com/haniepark" target="_blank" title="Follow me on Twitter!"><span class="icons"><i class="fa fa-twitter-square fa-5x"></i></span></a>
 					</div>
 				</div>
-
 			</div>
+			<footer><div id="license">Copyright &copy;2014<a href="http://www.haniepark.com">Stephanie Park</a></div></footer>
 		</div><!--.container-->				
-
 	</body>
 </html>
